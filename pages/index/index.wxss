@@ -1,0 +1,195 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.title {
+  display: block;
+  font-size: 56rpx;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  display: block;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.player-count, .roles-section {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.label {
+  display: block;
+  color: #ddd;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.slider-box {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.count-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ffd700;
+  min-width: 100rpx;
+}
+
+.roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.role-tag {
+  background: rgba(255,215,0,0.15);
+  border: 1rpx solid rgba(255,215,0,0.3);
+  padding: 16rpx 32rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  color: #ffd700;
+}
+
+.role-tag.evil {
+  background: rgba(255,107,107,0.15);
+  border-color: rgba(255,107,107,0.3);
+  color: #ff6b6b;
+}
+
+.start-btn, .restart-btn {
+  width: 100%;
+  padding: 36rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  border: none;
+  border-radius: 30rpx;
+  color: #1a1a2e;
+  margin-top: 40rpx;
+}
+
+.night-panel {
+  position: relative;
+  padding-top: 80rpx;
+}
+
+.back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 20rpx 40rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+
+.step-indicator {
+  text-align: center;
+  font-size: 28rpx;
+  color: #888;
+  margin-bottom: 40rpx;
+}
+
+.current-role {
+  text-align: center;
+  font-size: 56rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  min-height: 80rpx;
+}
+
+.current-role.good {
+  color: #4ecdc4;
+}
+
+.current-role.evil {
+  color: #ff6b6b;
+}
+
+.current-role.neutral {
+  color: #ffd700;
+}
+
+.instruction {
+  text-align: center;
+  font-size: 36rpx;
+  color: #ddd;
+  margin-bottom: 50rpx;
+  line-height: 1.6;
+  padding: 0 20rpx;
+}
+
+.timer {
+  text-align: center;
+  font-size: 120rpx;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 50rpx;
+}
+
+.controls {
+  display: flex;
+  gap: 30rpx;
+  justify-content: center;
+}
+
+.control-btn {
+  padding: 24rpx 60rpx;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 20rpx;
+}
+
+.pause-btn {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.next-btn {
+  background: linear-gradient(45deg, #4ecdc4, #44a3aa);
+  color: #fff;
+}
+
+.complete-panel {
+  text-align: center;
+  padding: 80rpx 40rpx;
+}
+
+.complete-icon {
+  display: block;
+  font-size: 120rpx;
+  margin-bottom: 40rpx;
+}
+
+.complete-text {
+  display: block;
+  font-size: 48rpx;
+  color: #4ecdc4;
+  margin-bottom: 30rpx;
+}
+
+.complete-sub {
+  display: block;
+  color: #888;
+  font-size: 32rpx;
+  margin-bottom: 60rpx;
+}
