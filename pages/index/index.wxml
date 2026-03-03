@@ -1,0 +1,58 @@
+<view class="container">
+  <!-- 设置页面 -->
+  <view class="setup-panel" wx:if="{{!isNightMode}}">
+    <view class="header">
+      <text class="title">🎭 阿瓦隆助手</text>
+      <text class="subtitle">夜间流程语音引导</text>
+    </view>
+
+    <view class="player-count">
+      <text class="label">选择游戏人数</text>
+      <view class="slider-box">
+        <slider min="5" max="10" value="{{playerCount}}" show-value bindchange="onCountChange"/>
+        <text class="count-value">{{playerCount}}人</text>
+      </view>
+    </view>
+
+    <view class="roles-section">
+      <text class="label">角色配置</text>
+      <view class="roles-list">
+        <view wx:for="{{roles}}" wx:key="index" class="role-tag {{item.type}}">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+
+    <button class="start-btn" bindtap="startNight">开始夜间流程</button>
+  </view>
+
+  <!-- 夜间流程页面 -->
+  <view class="night-panel" wx:if="{{isNightMode && !isComplete}}">
+    <button class="back-btn" bindtap="goBack">← 返回</button>
+    
+    <view class="step-indicator">
+      步骤 {{currentStep + 1}} / {{totalSteps}}
+    </view>
+    
+    <view class="current-role {{steps[currentStep].type}}">
+      {{steps[currentStep].role}}
+    </view>
+    
+    <view class="instruction">{{steps[currentStep].instruction}}</view>
+    
+    <view class="timer">{{timeLeft}}</view>
+    
+    <view class="controls">
+      <button class="control-btn pause-btn" bindtap="togglePause">{{isPaused ? '继续' : '暂停'}}</button>
+      <button class="control-btn next-btn" bindtap="nextStep">下一步</button>
+    </view>
+  </view>
+
+  <!-- 完成页面 -->
+  <view class="complete-panel" wx:if="{{isComplete}}">
+    <text class="complete-icon">🌅</text>
+    <text class="complete-text">天亮了，所有人睁眼！</text>
+    <text class="complete-sub">游戏开始，祝各位游戏愉快</text>
+    <button class="restart-btn" bindtap="restart">再来一局</button>
+  </view>
+</view>
